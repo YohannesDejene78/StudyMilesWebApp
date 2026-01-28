@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(31, 39, 46);
+    color: white;
+}
+
+nav button{
+    height: 35px;
+    width: 65px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgb(39, 188, 39);
+    background-color: transparent;
+    border: 2.5px solid gray;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(126, 126, 126, 0.6);
+    float: right;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+.main{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main input{
+    width: 250px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 2.5px solid white;
+}
+
+.main input::placeholder{
+    font-weight: 700;
+}
+
+.main button{
+    width: 250px;
+    height: 40px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    border: 2.5px solid white;
+    cursor: pointer;
+}
+
+.main button:first-of-type{
+    background-color: rgb(47, 187, 47);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(55, 211, 55, 0.5);
+}
+
+hr {
+    border: 1px solid rgb(255, 255, 255); /* Solid black line */
+    width: 30%; /* Full width */
+    margin: 20px 0; /* Add spacing */
+
+}
+
+.main input{
+    color: white;
+    padding-left: 1rem;
+}

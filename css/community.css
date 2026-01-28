@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    background-color: rgb(31, 39, 46);
+    color: white;
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.selected {
+    color: rgb(32, 180, 32);
+    border: 2.5px solid rgb(32, 180, 32);
+    border-radius: 0.5rem;
+}
+
+.links {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+}
+
+.nav {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid rgb(168, 168, 168);
+    gap: 2rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 1.4rem;
+    margin-top: 1.7rem;
+}
+
+.links img {
+    height: 40px;
+    width: auto;
+    margin-left: 1.4rem;
+    margin-right: 0.4rem;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    height: 100vh;
+}
+
+.pI {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.infos {
+    position: sticky; /* Stick to its position relative to the viewport */
+    top: 0; /* Stick to the top of the viewport */
+    width: 50%; /* Fixed width for .infos */
+    height: 100vh; /* Full height of the viewport */
+    margin-left: auto; /* Push it to the right of .main */
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prof {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.prof img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.coms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.com {
+    height: 100px;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.messagesCont{
+    position: relative;
+    height: 90vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Optional: For thinner scrollbars (Firefox) */
+    scrollbar-color: gray transparent;
+}
+
+.messages img{
+    height: 40px;
+    width: auto;
+}
+
+.mPart{
+    display: flex;
+    align-items: end;
+    width: 100%;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.message{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-height: 35px;
+    border-radius: 0.7rem;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    min-width: 90%;
+}
+
+.answers button{
+    height: 30px;
+    width: 130px;
+    background-color: rgb(32, 164, 32);
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    margin: 0 1rem;
+}
+
+.answers button:hover{
+    cursor: pointer;
+    background-color: rgba(32, 164, 32, 0.509);
+}
+
+.input{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.input input{
+    min-height: 7vh;
+    width: 100%;
+    border: none;
+    background-color: rgb(107, 107, 107);
+    border-radius: 0.5rem;
+    outline: none;
+    color: white;
+    cursor: text;
+    padding: 0.5rem;
+}
+
+.input input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+
+.comSelected {
+    flex-shrink: 0;
+    position: sticky;
+    height: 100px;
+    width: 80%;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: large;
+    font-weight: 700;
+    z-index: 3;
+    top: 20px;
+    left: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.notf{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40%;
+    width: 40%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 78, 25);
+    border-radius: 50%;
+}
+
+.input{
+    position: relative;
+}
+
+.fa-arrow-up{
+    position: absolute;
+    top: 27%;
+    right: 4%;
+    height: 2rem;
+    width: 2rem;
+    color: rgb(0, 0, 0);
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.input .fa-arrow-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input .fa-arrow-up:hover{
+    cursor: pointer;
+    background-color: rgb(173, 235, 168);
+    color: rgb(145, 145, 145);
+}
+
+.dislike-like:hover{
+    cursor: pointer;
+    color: rgb(145, 145, 145);
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 3000; /* Ensure it appears above other elements */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Hide the navigation bar */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button */
+    }
+
+    .nav.active {
+        display: flex; /* Show the navigation bar when active */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(31, 39, 46, 0.95); /* Semi-transparent background */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        gap: 20px;
+        overflow-y: auto;
+    }
+    .main{
+        width: 100%;
+    }
+    .sectionCont{
+        width: 75%;
+    }
+
+    .notf{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    
+    .prof a img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof{
+        font-size: smaller;
+    }
+
+    .prof img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof a{
+        flex-direction: column;
+    }
+
+    .prof{
+        display: flex;
+        flex-direction: column;
+    }
+    .profiles{
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .task{
+        font-size: smaller;
+    }
+    .hitoryCont{
+        font-size: small;
+    }
+    .timer-container #display{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 350px){
+    .infos{
+        display: none;
+    }
+    
+}
+

@@ -1,0 +1,704 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    background-color: rgb(31, 39, 46);
+    color: white;
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.selected{
+    color: rgb(32, 180, 32);
+    border: 2.5px solid rgb(32, 180, 32);
+    border-radius: 0.5rem;
+}
+
+.links{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+}
+
+.nav{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid rgb(168, 168, 168);
+    gap: 2rem
+}
+
+.logo{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 1.4rem;
+    margin-top: 1.7rem
+}
+
+.links img{
+    height: 40px;
+    width: auto;
+    margin-left: 1.4rem;
+    margin-right: 0.4rem;
+}
+.nav .links{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* .nav .links:first-of-type {
+    margin-top: -29px; 
+}
+ */
+/* .nav .links{
+    margin-top: -40px;
+    margin-left: 1rem;
+} */
+
+
+.main{
+    width: 80%;
+    display: flex;
+    overflow-y: auto; 
+    height: 100vh;
+}
+
+.sectionCont{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.title{
+    background-image: url("img/marsbg2.png"); 
+    background-size: cover; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 83%;
+    border: 1px solid white;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    padding: 1rem;
+    border: none;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(179, 88, 35, 0.1); 
+}
+
+.headT{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.headT h6{
+    color: rgb(182, 182, 182);
+}
+
+.topview{
+    height: 170px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.desc{
+    width: 150px;
+    position: absolute;
+    border: 3px solid rgb(32, 180, 32);
+    
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem;
+    top: 40%;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+    font-size: 10px;
+    z-index: 100;
+}
+
+.descHead{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+
+.lesson{
+    display: flex;
+    position: relative;
+}
+.lesson img{
+    height: 100px;
+    width: auto;
+    margin-top: 1rem;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.lesson:hover .desc{
+    opacity: 1;
+    visibility: visible;
+}
+
+.lesson img:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.7); /* Greenish glow effect */
+    cursor: pointer;;
+}
+
+.sectionCont .section:nth-of-type(even) .lesson:nth-of-type(3){
+    margin-right: -7rem;
+}
+
+.main .lesson:nth-of-type(3){
+    margin-left: -7rem;
+
+}
+.main .lesson:nth-of-type(4){
+    margin-left: -10rem;
+
+}
+.main .lesson:nth-of-type(6) img:hover{
+    box-shadow: 0px 0px 15px 5px rgba(255, 157, 0, 0.7);
+    
+}
+
+.main .lesson:nth-of-type(5) img{
+    border-radius: 0%;
+    height: 70px;
+    
+    box-shadow: 0px 0px 0px 0px rgba(0, 255, 0, 0);
+
+}
+
+.main .lesson:nth-of-type(5){
+    margin-left: -5rem;
+}
+
+.sectionCont .section:nth-of-type(even) .lesson:nth-of-type(3){
+    margin-right: -17rem;
+}
+.sectionCont .section:nth-of-type(even) .lesson:nth-of-type(4){
+    margin-right: -33rem;
+}
+.sectionCont .section:nth-of-type(even) .lesson:nth-of-type(5){
+    margin-right: -17rem;
+}
+.sectionCont .section:nth-of-type(even) .topview{
+    left: 20%;
+}
+
+.profiles{
+    display: flex;
+
+}
+
+.prof img{
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    width: 60px;
+}
+
+.prof i{
+    height: 100px;
+    width: auto;
+    color: yellowgreen;
+}
+
+.taskStat img{
+    height: 100px;
+    width: 100px;
+}
+
+.infos{
+    position: sticky; /* Stick to its position relative to the viewport */
+    top: 0; /* Stick to the top of the viewport */
+    width: 35%; /* Fixed width for .infos */
+    height: 100vh; /* Full height of the viewport */
+    margin-left: auto; /* Push it to the right of .sectionCont */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profiles{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prof{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.task{
+    height: 200px;
+    width: 90%;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;;
+}
+
+.taskT{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.task button{
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: green;
+}
+
+.taskStat{
+    display: flex;
+}
+
+.taskStat .bolt{
+    height: 50px;
+    width: auto;
+}
+
+.stat{
+    width: 100%;
+}
+.statBar img{
+    height: 20px;
+    width: auto;
+}
+
+.statBar{
+    display: flex;
+    width: 100%;
+}
+
+.bar{
+    height: 20px;
+    width: 85%;
+    background-color: gray;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+.planet{
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Align to the left */
+    height: 200px;
+    width: auto;
+    margin: 0; /* Remove any extra margin */
+    padding: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.notf{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40%;
+    width: 40%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 78, 25);
+    border-radius: 50%;
+}
+
+/* Modal overlay covers the entire viewport and is hidden by default */
+.lesson-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+/* Activate modal display */
+.lesson-modal.active {
+    display: flex;
+}
+
+/* Modal box inside the overlay */
+.modal-content {
+    background: #fff;
+    width: 80vw; /* 50% of the viewport width */
+    height: 90vh; /* 50% of the viewport height */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2001;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close button styling */
+.closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* When modal is active, apply grayscale filter to the main content */
+body.modal-active .main {
+    filter: grayscale(100%);
+}
+
+.complete{
+    min-height: 30px;
+    width: 140px;
+    background-color: rgb(32, 180, 32);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    align-self: center;
+    justify-self: end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.complete:hover{
+    background-color: rgba(65, 207, 65, 0.756);
+}
+
+.lesson .here {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    z-index: 1000;
+    top: -30%;
+    left: 15%;
+    
+}
+
+.lesson .here:hover{
+    box-shadow: none;
+}
+
+.here {
+    animation: jump 1s infinite ease-in-out;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at the original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up by 20px */
+    }
+}
+
+.here{
+    display: none;
+    pointer-events: none;
+}
+
+.modal-content .complete{
+    display: none;
+}
+
+.token-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: none;
+    z-index: 3000;
+}
+
+.token-animation img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.token-animation p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes growAndFade {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.section-complete-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: none;
+    z-index: 4000;
+    pointer-events: none;
+}
+
+.section-complete-animation img {
+    width: auto;
+    height: 250px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+    justify-self: center;
+}
+
+.section-complete-animation p {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes growAndFadeSection {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.taskStat {
+    padding-left: 2rem;
+}
+
+.taskT a{
+    cursor: pointer;
+}
+
+.token-animation{
+    pointer-events: none;
+}
+
+.timer-container{
+    height: 10%;
+    width: 20%;
+    background-color: lightgreen;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    align-self: center;
+    margin-top: auto;
+}
+
+/* Default styles for the menu button */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 3000; /* Ensure it appears above other elements */
+}
+
+.prof a{
+    display: flex;
+    align-items: center;
+}
+
+/* Tablet version: Hide the nav bar and show the menu button */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Hide the navigation bar */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button */
+    }
+
+    .nav.active {
+        display: flex; /* Show the navigation bar when active */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(31, 39, 46, 0.95); /* Semi-transparent background */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        gap: 20px;
+        overflow-y: auto;
+    }
+    .main{
+        width: 100%;
+    }
+    .sectionCont{
+        width: 75%;
+    }
+
+    .notf{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    
+    .prof a img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof{
+        font-size: smaller;
+    }
+
+    .prof img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof a{
+        flex-direction: column;
+    }
+
+    .prof{
+        display: flex;
+        flex-direction: column;
+    }
+    .profiles{
+        justify-content: center;
+        gap: 20px;
+    }
+    .planet{
+        height: 150px;
+    }
+    .task{
+        font-size: smaller;
+    }
+    .lesson-modal{
+        font-size: small;
+    }
+    .timer-container #display{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 350px){
+    .infos{
+        display: none;
+    }
+    .sectionCont{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .lesson img{
+        height: 70px;
+    }
+    .topview{
+        height: 130px;
+    }
+    .title{
+        margin-right: 25px;
+    }
+}
+

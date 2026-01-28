@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    background-color: rgb(31, 39, 46);
+    color: white;
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.selected{
+    color: rgb(32, 180, 32);
+    border: 2.5px solid rgb(32, 180, 32);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.links{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+}
+
+
+
+.nav{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid rgb(168, 168, 168);
+    gap: 2rem
+}
+
+.logo{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 1.4rem;
+    margin-top: 1.7rem
+}
+
+.links img{
+    height: 40px;
+    width: auto;
+    margin-left: 1.4rem;
+    margin-right: 0.4rem;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+
+.main {
+    width: 80%;
+    display: flex;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.pI{
+    display: flex;
+    width: 100%;
+}
+
+.title{
+    background-size: cover; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 83%;
+    border: 1px solid white;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    padding: 1rem;
+    border: none;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(179, 88, 35, 0.1); 
+}
+
+.headT{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.headT h6{
+    color: rgb(182, 182, 182);
+}
+
+.title h3, .title h5{
+    margin-left: 1rem;
+    z-index: 100;
+}
+
+.pI button{
+    height: 40px;
+    width: 160px;
+    background-color: rgb(21, 180, 21);
+    color: white;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pI button:hover{
+    background-color: rgb(21, 180, 21, 0.8);
+}
+
+.infos {
+    position: sticky; /* Stick to its position relative to the viewport */
+    top: 0; /* Stick to the top of the viewport */
+    width: 50%; /* Fixed width for .infos */
+    height: 100vh; /* Full height of the viewport */
+    margin-left: auto; /* Push it to the right of .sectionCont */
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prof {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.prof img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.task {
+    height: 200px;
+    width: 90%;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.taskT {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.task button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: green;
+}
+
+.taskStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.taskStat img {
+    height: 100px;
+    width: 100px;
+}
+
+.taskStat .bolt {
+    height: 50px;
+    width: auto;
+}
+
+.stat {
+    width: 100%;
+}
+
+.statBar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.statBar img {
+    height: 20px;
+    width: auto;
+}
+
+.bar {
+    height: 20px;
+    width: 85%;
+    background-color: gray;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+.pI {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bar2 {
+    height: 20px;
+    width: 30%;
+    background-color: gray;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+.xp {
+    display: flex;
+}
+
+.xp img {
+    height: 20px;
+    width: auto;
+}
+
+.tokens img {
+    height: 100px;
+    width: auto;
+} 
+
+.tokens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tokens button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: green;
+    cursor: pointer;
+}
+
+.notf{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40%;
+    width: 40%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 78, 25);
+    border-radius: 50%;
+}
+
+.image-container {
+    position: absolute;
+    width: 83%; /* Adjust to your image width */
+    height: 100px;
+  }
+
+  .image-container img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    position: absolute;
+    height: 100%;
+  }
+
+  .gray-image {
+    filter: grayscale(0.8);
+    width: 100%;
+    height: 100%;
+  }
+
+  .color-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* This controls how much color is shown */
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0);
+    clip-path: inset(0 100% 0 0); /* Keeps only the left 20% */
+  }
+
+  #display, .timer{
+    background-color: lightgreen;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+  }
+
+  .historylink{
+    cursor: pointer;
+  }
+
+  
+
+  .hitoryCont {
+    position: fixed; /* Fixed relative to the viewport */
+    top: 25%;
+    left: 25%; 
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    align-self: center;
+    display: none;
+    overflow-y: auto;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.historyWrapper {
+    position: relative; /* Relative to the .hitoryCont */
+    width: 100%; /* Optional: Adjust width */
+    height: 100%; /* Optional: Adjust height */
+    overflow-y: auto;
+}
+
+.history {
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.closeHistory {
+    position: absolute; /* Position relative to the parent container */
+    top: 0; /* Distance from the top */
+    right: 5%; /* Distance from the right */
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    font-weight: bold;
+    cursor: pointer; /* Change cursor to pointer */
+    color: gray; /* Button text color */
+    z-index: 1001; /* Ensure it's above other elements */
+    pointer-events: auto;
+}
+
+.closeHistory:hover {
+    color: red; /* Change color on hover for better UX */
+}
+
+.historyItem h6{
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 3000; /* Ensure it appears above other elements */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Hide the navigation bar */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button */
+    }
+
+    .nav.active {
+        display: flex; /* Show the navigation bar when active */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(31, 39, 46, 0.95); /* Semi-transparent background */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        gap: 20px;
+        overflow-y: auto;
+    }
+    .main{
+        width: 100%;
+    }
+    .sectionCont{
+        width: 75%;
+    }
+
+    .notf{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    
+    .prof a img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof{
+        font-size: smaller;
+    }
+
+    .prof img{
+        height: 50px;
+        width: auto;
+    }
+
+    .prof a{
+        flex-direction: column;
+    }
+
+    .prof{
+        display: flex;
+        flex-direction: column;
+    }
+    .profiles{
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .task{
+        font-size: smaller;
+    }
+    .hitoryCont{
+        font-size: small;
+    }
+    .timer-container #display{
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 350px){
+    .infos{
+        display: none;
+    }
+    
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head> 
+<body>
+    <button id="menuToggle" class="menu-toggle">
+        &#9776;
+    </button> 
+    <div class="nav">
+        <img src="img/studmiles2.png" class="logo">
+        <a href="home2.html">
+            <div class="links">
+                <img src="img/navIcons/home.png" alt="">
+                <p>Home</p>
+            </div>
+        </a>
+        
+        <a href="study.html">
+            <div class="links">
+                <img src="img/navIcons/Study.png" alt="">
+                <p>Study</p>
+            </div>
+        </a>
+        <a href="community.html">
+            <div class="links">
+                <img src="img/navIcons/community.png" alt="">
+                <p>Community</p>
+            </div>
+        </a>
+        
+        <a href="milestones.html">
+            <div class="links">
+                <img src="img/navIcons/milestones.png" alt="">
+                <p>Milestones</p>
+            </div>
+        </a>
+        
+        <a href="tasks.html">
+            <div class="links">
+                <img src="img/navIcons/tasks.png" alt="">
+                <p>Tasks</p>
+            </div>
+        </a>
+        
+        <a href="#">
+            <div class="links selected">
+                <img src="img/navIcons/leaderboard.png" alt="">
+                <p>Leaderboard</p>
+            </div>
+        </a>
+    </div>
+    <div class="main">
+        <div class="pI">
+            <div class="options">
+                <h3 class="unselect">All time</h3>
+            </div>
+            <div class="miles">
+                
+            </div>  
+            
+        </div>
+            
+        <div class="infos">
+            <div class="profiles">
+                <div class="prof">
+                    <a href="profile.html"><img src="img/icon2/profile3.svg" alt="" class="profile"></a>
+                    
+                    <p id="userName"></p>
+                </div>
+                <div class="prof">
+                    <img src="img/icons/token.png" alt="">
+                    <p class="tokenCount" id="tokenCount">0</p>
+                </div>
+                <div class="prof">
+                    <img src="img/notification.png" alt="">
+                    <p class="notf">0</p>
+                </div>
+            </div>
+
+            <div class="task">
+                <div class="taskT">
+                    <h3>Tasks Achievement</h3>
+                    <button>View All</button>
+                </div>
+                <div class="taskStat">
+                    <div class="stat">
+                        <ul>
+                            <li>3 Reviews in row</li>
+                            <li>Perfec score on assignment</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/leaderboard.js"></script>
+</body>
