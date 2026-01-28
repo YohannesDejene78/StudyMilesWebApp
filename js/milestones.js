@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function fetchIncentiveData(userID) {
         try {
             // Fetch all incentives
-            const response = await fetch("https://studymiles-2.onrender.com/incentive");
+            const response = await fetch("https://studymileswebapp.onrender.com/incentive");
             if (!response.ok) {
                 throw new Error("Failed to fetch incentive data");
             }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const result = data.find(item => item.userID.userID === parseInt(userID));
             if (result) {
                 const incentiveID = result.incentivesID;
-                const incentiveResponse = await fetch(`https://studymiles-2.onrender.com/incentive/${incentiveID}`);
+                const incentiveResponse = await fetch(`https://studymileswebapp.onrender.com/incentive/${incentiveID}`);
                 if (!incentiveResponse.ok) {
                     throw new Error("Failed to fetch incentive details");
                 }
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     try {
-        const response = await fetch(`https://studymiles-2.onrender.com/new_user/${userID}`);
+        const response = await fetch(`https://studymileswebapp.onrender.com/new_user/${userID}`);
         
         if (!response.ok) {
             throw new Error("Failed to fetch user data");

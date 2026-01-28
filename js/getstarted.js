@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function createNewUser(userData) {
     try {
-        const response = await fetch("https://studymiles-2.onrender.com/new_user", {
+        const response = await fetch("https://studymileswebapp.onrender.com/new_user", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -96,7 +96,7 @@ async function createNewUser(userData) {
 
 async function createProgress(progressData) {
     try {
-        const response = await fetch("https://studymiles-2.onrender.com/progress", {
+        const response = await fetch("https://studymileswebapp.onrender.com/progress", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -117,7 +117,7 @@ async function createProgress(progressData) {
 
 async function createIncentive(incentiveData) {
     try {
-        const response = await fetch("https://studymiles-2.onrender.com/incentive", {
+        const response = await fetch("https://studymileswebapp.onrender.com/incentive", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

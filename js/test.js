@@ -1,6 +1,6 @@
 const targetUserID = 302;
 
-fetch("https://studymiles-2.onrender.com/incentive")
+fetch("https://studymileswebapp.onrender.com/incentive")
   .then(response => response.json())
   .then(data => {
     const result = data.find(item => item.userID.userID === targetUserID);

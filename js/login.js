@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch(`https://studymiles-2.onrender.com/new_user/${userID}`);
+            const response = await fetch(`https://studymileswebapp.onrender.com/new_user/${userID}`);
             
             if (!response.ok) {
                 throw new Error("User not found.");

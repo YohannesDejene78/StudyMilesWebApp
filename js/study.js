@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     async function fetchIncentiveData(userID) {
         try {
-            const response = await fetch("https://studymiles-2.onrender.com/incentive");
+            const response = await fetch("https://studymileswebapp.onrender.com/incentive");
             if (!response.ok) throw new Error("Failed to fetch incentive data");
 
             const data = await response.json();
             const result = data.find(item => item.userID.userID === parseInt(userID));
             if (result) {
                 const incentiveID = result.incentivesID;
-                const incentiveResponse = await fetch(`https://studymiles-2.onrender.com/incentive/${incentiveID}`);
+                const incentiveResponse = await fetch(`https://studymileswebapp.onrender.com/incentive/${incentiveID}`);
                 if (!incentiveResponse.ok) throw new Error("Failed to fetch incentive details");
 
                 const incentiveData = await incentiveResponse.json();
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     try {
-    const response = await fetch(`https://studymiles-2.onrender.com/new_user/${userID}`);
+    const response = await fetch(`https://studymileswebapp.onrender.com/new_user/${userID}`);
     if (!response.ok) throw new Error("Failed to fetch user data");
     const userData = await response.json();
     document.querySelector("#userName").textContent = userData.name;

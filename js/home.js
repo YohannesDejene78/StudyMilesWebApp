@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function updateEarnedTokens(userID) {
         try {
             // Fetch all incentives
-            const response = await fetch("https://studymiles-2.onrender.com/incentive");
+            const response = await fetch("https://studymileswebapp.onrender.com/incentive");
             if (!response.ok) {
                 throw new Error("Failed to fetch incentive data");
             }
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const incentiveID = result.incentivesID;
 
                 // Update the incentive using the incentiveID
-                const updateResponse = await fetch(`https://studymiles-2.onrender.com/incentive/${incentiveID}`, {
+                const updateResponse = await fetch(`https://studymileswebapp.onrender.com/incentive/${incentiveID}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function fetchIncentiveData(userID) {
         try {
             // Fetch all incentives
-            const response = await fetch("https://studymiles-2.onrender.com/incentive");
+            const response = await fetch("https://studymileswebapp.onrender.com/incentive");
             if (!response.ok) {
                 throw new Error("Failed to fetch incentive data");
             }
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const result = data.find(item => item.userID.userID === parseInt(userID));
             if (result) {
                 const incentiveID = result.incentivesID;
-                const incentiveResponse = await fetch(`https://studymiles-2.onrender.com/incentive/${incentiveID}`);
+                const incentiveResponse = await fetch(`https://studymileswebapp.onrender.com/incentive/${incentiveID}`);
                 if (!incentiveResponse.ok) {
                     throw new Error("Failed to fetch incentive details");
                 }
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function fetchProgressData(userID) {
         try {
             // Fetch all progress data
-            const response = await fetch("https://studymiles-2.onrender.com/progress");
+            const response = await fetch("https://studymileswebapp.onrender.com/progress");
             if (!response.ok) {
                 throw new Error("Failed to fetch progress data");
             }
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const progressID = result.progressID;
 
                 // Fetch progress details using the progressID
-                const progressResponse = await fetch(`https://studymiles-2.onrender.com/progress/${progressID}`);
+                const progressResponse = await fetch(`https://studymileswebapp.onrender.com/progress/${progressID}`);
                 if (!progressResponse.ok) {
                     throw new Error("Failed to fetch progress details");
                 }
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function updateProgressData(userID) {
     try {
         // Fetch all progress data
-        const response = await fetch("https://studymiles-2.onrender.com/progress");
+        const response = await fetch("https://studymileswebapp.onrender.com/progress");
         if (!response.ok) {
             throw new Error("Failed to fetch progress data");
         }
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const progressID = result.progressID;
 
             // Update the progress using the progressID
-            const updateResponse = await fetch(`https://studymiles-2.onrender.com/progress/${progressID}`, {
+            const updateResponse = await fetch(`https://studymileswebapp.onrender.com/progress/${progressID}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function updateCompletedPercentage(userID) {
         try {
             // Fetch all progress data
-            const response = await fetch("https://studymiles-2.onrender.com/progress");
+            const response = await fetch("https://studymileswebapp.onrender.com/progress");
             if (!response.ok) {
                 throw new Error("Failed to fetch progress data");
             }
@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const progressID = result.progressID;
 
                 // Update the completedPercentage using the progressID
-                const updateResponse = await fetch(`https://studymiles-2.onrender.com/progress/${progressID}`, {
+                const updateResponse = await fetch(`https://studymileswebapp.onrender.com/progress/${progressID}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     async function fetchCompletedPercentage(userID) {
         try {
             // Fetch all progress data
-            const response = await fetch("https://studymiles-2.onrender.com/progress");
+            const response = await fetch("https://studymileswebapp.onrender.com/progress");
             if (!response.ok) {
                 throw new Error("Failed to fetch progress data");
             }
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const progressID = result.progressID;
 
                 // Fetch progress details using the progressID
-                const progressResponse = await fetch(`https://studymiles-2.onrender.com/progress/${progressID}`);
+                const progressResponse = await fetch(`https://studymileswebapp.onrender.com/progress/${progressID}`);
                 if (!progressResponse.ok) {
                     throw new Error("Failed to fetch progress details");
                 }
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     
     try {
-        const response = await fetch(`https://studymiles-2.onrender.com/new_user/${userID}`);
+        const response = await fetch(`https://studymileswebapp.onrender.com/new_user/${userID}`);
         
         if (!response.ok) {
             throw new Error("Failed to fetch user data");
