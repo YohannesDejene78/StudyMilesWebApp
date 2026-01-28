@@ -1,16 +1,16 @@
-# Build stage
-FROM maven:3.9.2-eclipse-temurin-17 AS build
+# Build stage (Java 21)
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
-RUN mvn clean package -DskipTests
+RUN mvn clean package -Dmaven.test.skip=true
 
-# Run stage
-FROM eclipse-temurin:17-jdk
+# Run stage (Java 21)
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
-# Pass environment variables from Render
+# Render environment variables
 ENV SPRING_DATASOURCE_URL=$DB_URL
 ENV SPRING_DATASOURCE_USERNAME=$DB_USERNAME
 ENV SPRING_DATASOURCE_PASSWORD=$DB_PASSWORD
