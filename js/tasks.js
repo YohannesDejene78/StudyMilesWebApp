@@ -9,6 +9,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     function update() {
         fetchIncentiveData(userID);    
     }
+    async function updateEarnedTokens(userID) {
+        try {
+            // Fetch all incentives
+            const response = await fetch("https://studymileswebapp.onrender.com/incentive");
+            if (!response.ok) {
+                throw new Error("Failed to fetch incentive data");
+            }
+
+            const data = await response.json();
+
+            // Find the incentive for the current user
+            const result = data.find(item => item.userID.userID === parseInt(userID));
+            if (result) {
+                const incentiveID = result.incentivesID;
+
+                // Update the incentive using the incentiveID
+                const updateResponse = await fetch(`https://studymileswebapp.onrender.com/incentive/${incentiveID}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        earnedTokens: totalTokens // Update the earnedTokens field
+                    })
+                });
+
+                if (!updateResponse.ok) {
+                    throw new Error("Failed to update incentive");
+                }
+
+                const updatedIncentive = await updateResponse.json();
+                console.log("Updated incentive:", updatedIncentive);
+                return updatedIncentive; // Return the updated incentive data
+            } else {
+                console.log("User not found in incentive data. while updating tokens");
+                return null; // Return null if no incentive is found
+            }
+        } catch (error) {
+            console.error("Error updating incentive:", error);
+            return null; // Return null in case of an error
+        }
+    }
 
     async function fetchIncentiveData(userID) {
         try {
@@ -216,8 +258,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         totalTokens += assignment.token;
                 
 
+                        updateEarnedTokens(userID);
                         tokenCountElement.textContent = totalTokens;
-                
 
                         tokenMessage.textContent = `+${assignment.token} Tokens`;
 
