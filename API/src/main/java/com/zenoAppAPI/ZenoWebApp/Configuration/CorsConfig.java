@@ -13,7 +13,8 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "http://127.0.0.1:5501",
                         "http://localhost:5501",
-                        "https://studymileslearnprogramming.netlify.app"
+                        "https://studymileslearnprogramming.netlify.app",
+                        "https://studymiles-e-learning.netlify.app"  // <-- NEW URL
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
